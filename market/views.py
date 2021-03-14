@@ -19,7 +19,7 @@ def home(request):
         # )
         yag = yagmail.SMTP('sagnolkamdem721@gmail.com', 'sncyfredcdgapvvh')
         yag.send(to = email,
-         subject = 'hi',
+         subject = 'contact',
          contents = message)
         send = True
         return render(request, '../templates/base.html', locals())
