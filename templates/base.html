@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% if send %}
+
+    <p>Merci Mr {{ name }}</p>
+
+    {% else %}
+
+    <form action="{% url 'home' %}" method="POST">
+        {% csrf_token %}
+        <label for="">Your name</label><input type="name" name="name"></br>
+        <label for="">Your message</label><input type="text" name="message"></br>
+        <label for="">Your email</label><input type="email" name="email"></br>
+        <input type="submit" value="Envoyer">
+    </form>
+
+    {% endif %}
+</body>
+
+</html>
